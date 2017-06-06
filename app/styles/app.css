@@ -1,0 +1,199 @@
+body{
+  font-family: 'Helvetica Neue', sans-serif;
+  h1 {
+    a {
+      color: black;
+    }
+  }
+}
+
+@primary-color: #45c2f9;
+@primary-color-lighter: rgba(69, 194, 249, 0.25);
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideup {
+  from {top: 2000px;}
+  to {top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes slideup {
+  from {top: 2000px;}
+  to {top: 0px;}
+}
+
+.filter-input > input{
+    transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari and Chrome */
+    -o-transition: all 0.2s; /* Opera */
+}
+
+.filter-input {
+  @media all and (max-width: 700px) { /* screen size until 500px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    .input-group-addon {
+      border-radius: 0px;
+      background-color: @primary-color;
+      border: none;
+      border-left: 1px solid @primary-color;
+      color: white;
+      font-size: 22px;
+    }
+    input {
+      font-size: 20px;
+      color: white;
+      padding: 20px;
+      padding-left: 10px;
+      border: none;
+      border-radius: 0px;
+      &:focus {
+        outline-width: 0px;
+        font-size: 26px;
+        height: 50px;
+      }
+      background-color: @primary-color;
+      &::-webkit-input-placeholder {
+         color: white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+         color: white;
+      }
+      &::-moz-placeholder {  /* Firefox 19+ */
+         color: white;
+      }
+      &:-ms-input-placeholder {
+         color: white;
+      }
+    }
+  }
+}
+
+.home-banner {
+  @media all and (max-width: 700px) { /* screen size until 500px */
+    display: inline-block;
+    vertical-align: sub;
+    font-size: 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 12px;
+    height: 40px;
+    border: none;
+    border-radius: 0px;
+    z-index: 10000;
+    a {
+      color: white;
+      display: block;
+      width: 100%;
+    }
+    background-color: @primary-color;
+  }
+}
+
+.home-link {
+  h1 {
+    font-size: 40px;
+    margin: -3px 3px 5px 0px;
+    line-height: 0.8;
+    a:focus {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  @media all and (min-width: 700px) {
+    margin-bottom: 20px;
+  }
+}
+
+.link-container {
+  display: inline-block;
+  margin-top: 20px;
+  border-color: black;
+  border-top: 5px solid;
+  border-bottom: 5px solid; 
+}
+
+.slide-up {
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+  -webkit-animation: slideup 1.5s ease; /* Chrome, Safari, Opera */
+  animation: slideup 1.5s ease;
+}
+.song-list {
+  position: relative;
+  padding: 0px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 20px;
+  list-style-type: none;
+  max-width: 300px;
+  li {
+    position: relative;
+    border-bottom: 1px solid;
+    border-color: #ddd;
+    padding: 4px;
+    &:active {
+      background-color: @primary-color-lighter;
+      a {
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      a {
+        text-decoration: none;
+      }
+    }
+    a {
+      color: black;
+      display: inline-block;
+      width: 100%;
+      padding-left: 20px;
+    }
+  }
+  @media all and (max-width: 700px) { /* screen size until 500px */
+    max-width: 9999px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.meta-text {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.container {
+  -webkit-animation: myfirst 5s linear; /* Chrome, Safari, Opera */
+  animation: myfirst 5s linear;
+  margin-top: 40px;
+}
+
+.author-info {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+@media all and (max-width: 1200px) { /* screen size until 1200px */
+    body {
+        font-size: 1em; /* 1.5x default size */
+    }
+}
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+    body {
+        font-size: 1.5em; /* 1.2x default size */
+        }
+    }
+@media all and (max-width: 700px) { /* screen size until 500px */
+    body {
+        font-size: 2em; /* 0.8x default size */
+        }
+    }
