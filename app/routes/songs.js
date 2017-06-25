@@ -4,12 +4,15 @@ export default Ember.Route.extend({
   model() {
     return [
       {
-      name: "Helan går", 
+      id: "helan-gar",
+      name: "Helan går",
       },
       {
-      name: "1, 2, 45, 6, 7", 
+      id: "1-2-45-6-7",
+      name: "1, 2, 45, 6, 7",
       },
       {
+      id: "solen",
       name: "Solen"
       }
     ]
