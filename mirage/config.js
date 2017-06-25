@@ -30,21 +30,24 @@ export default function() {
         type: "songs",
         id: "helan-gar",
         attributes: {
-          title: "Helan går"
+          title: "Helan går",
+          lyrics: "Helan går, askdfjsd"
         }
       },
       {
         type: "songs",
         id: "1-2-45-6-7",
         attributes: {
-          title: "1, 2, 45, 6, 7"
+          title: "1, 2, 45, 6, 7",
+          lyrics: "1, 2, 45, 6, 7, askdfjsd"
         }
       },
       {
         type: "songs",
         id: "solen",
         attributes: {
-          title: "Solen"
+          title: "Solen",
+          lyrics: "Solen, askdfjsd"
         }
       }
   ]}
