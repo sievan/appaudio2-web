@@ -23,33 +23,11 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
-  this.get('/songs', function() {
-    return {
-      data: [
-        {
-          type: "songs",
-          id: "helan-gar",
-          attributes: {
-            title: "Helan går",
-            lyrics: "Helan går, askdfjsd"
-          }
-        },
-        {
-          type: "songs",
-          id: "1-2-45-6-7",
-          attributes: {
-            title: "1, 2, 45, 6, 7",
-            lyrics: "1, 2, 45, 6, 7, askdfjsd"
-          }
-        },
-        {
-          type: "songs",
-          id: "solen",
-          attributes: {
-            title: "Solen",
-            lyrics: "Solen, askdfjsd"
-          }
-        }
-    ]}
-  })
+  this.get('/songs', function(schema) {
+    return schema.songs.all();
+  });
+
+  this.get('/songs/:song_id', function(schema, request) {
+    return schema.songs.find(request.params.song_id);
+  });
 }
