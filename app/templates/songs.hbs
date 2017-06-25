@@ -1,9 +1,1 @@
-<h2>List of Songs</h2>
-
-<ul class="song-list">
-  {{#each model as |song|}}
-  <li><a href="#">
-    {{song}}
-  </a></li>
-  {{/each}}
-</ul>
+{{song-list title="List of songs" songs=model}}
