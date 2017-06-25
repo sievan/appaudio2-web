@@ -2,8 +2,10 @@
 
 <ul class="song-list">
   {{#each songs as |song|}}
-  <li><a href="#">
-    {{song.title}}
-  </a></li>
+  <li>
+    {{#link-to 'song' song}}
+      {{song.title}}
+    {{/link-to}}
+  </li>
   {{/each}}
 </ul>
